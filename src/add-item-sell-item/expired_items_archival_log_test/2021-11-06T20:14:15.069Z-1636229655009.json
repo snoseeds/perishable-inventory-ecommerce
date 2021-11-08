@@ -1,0 +1,55 @@
+{
+  "date": "2021-11-06T20:14:15.069Z",
+  "message": "Successfully archived removed expired item batches that are less than or equal to '1636229655009'",
+  "disposalArchiveDetails": {
+    "disposalRecord": {
+      "disposalType": "ExpiredDisposal",
+      "quantity": 29,
+      "lastChangedDateTime": "2021-11-06T20:14:15.007Z",
+      "id": "064f6022-f6e7-4633-bed9-6559f213c0b9",
+      "createDateTime": "2021-11-06T20:14:15.007Z"
+    },
+    "expiredDisposalRecords": [
+      {
+        "disposal": {
+          "disposalType": "ExpiredDisposal",
+          "quantity": 29,
+          "lastChangedDateTime": "2021-11-06T20:14:15.007Z",
+          "id": "064f6022-f6e7-4633-bed9-6559f213c0b9",
+          "createDateTime": "2021-11-06T20:14:15.007Z"
+        },
+        "item": {
+          "id": "5dab1e5d-e6d8-4576-9de2-5643b0886253",
+          "createDateTime": "2021-11-06T20:14:11.433Z",
+          "lastChangedDateTime": "2021-11-06T20:14:11.433Z",
+          "name": "orange",
+          "minimumExpiryGap": "0"
+        },
+        "quantity": 16,
+        "lastChangedDateTime": "2021-11-06T20:14:15.007Z",
+        "id": "e027b9ae-6f54-44c3-b357-a08d842554c6",
+        "createDateTime": "2021-11-06T20:14:15.007Z"
+      },
+      {
+        "disposal": {
+          "disposalType": "ExpiredDisposal",
+          "quantity": 29,
+          "lastChangedDateTime": "2021-11-06T20:14:15.007Z",
+          "id": "064f6022-f6e7-4633-bed9-6559f213c0b9",
+          "createDateTime": "2021-11-06T20:14:15.007Z"
+        },
+        "item": {
+          "id": "f53ad1f3-9010-48d5-93b9-43660290d8db",
+          "createDateTime": "2021-11-06T20:14:11.362Z",
+          "lastChangedDateTime": "2021-11-06T20:14:11.362Z",
+          "name": "pawpaw",
+          "minimumExpiryGap": "0"
+        },
+        "quantity": 13,
+        "lastChangedDateTime": "2021-11-06T20:14:15.007Z",
+        "id": "cbcdbc9e-6d85-4629-be1f-e15583490525",
+        "createDateTime": "2021-11-06T20:14:15.007Z"
+      }
+    ]
+  }
+}
