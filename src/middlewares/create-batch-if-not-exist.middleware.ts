@@ -24,7 +24,6 @@ export class CreateBatchIfNotExistMiddleware implements NestMiddleware {
         return next(err);
       }
     } catch(err) {
-      console.log("from batch");
       return next(err);
     }
   }

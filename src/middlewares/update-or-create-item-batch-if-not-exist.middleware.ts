@@ -28,7 +28,6 @@ export class UpdateOrCreateItemBatchIfNotExistMiddleware implements NestMiddlewa
       return next();
       
     } catch(err) {
-      console.log("from itembatch");
       return next(err);
     }
   }

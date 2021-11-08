@@ -23,8 +23,6 @@ export class RetrieveItemIfExistsMiddleware implements NestMiddleware {
 
       return res.status(404).send(new JSendResponseDto('failed', 404, "Bad request: The item does not exist in the platforrm's inventory", null));
     } catch(err) {
-      console.log("from item");
-
       return next(err);
     }
   }

@@ -143,7 +143,6 @@ export class AddItemSellItemService extends TransactionFor<AddItemSellItemServic
 
   async archiveExpiredBatchItemsToDisposal(expiredItemBatches: ItemBatch[]): Promise<{disposalRecord: Disposal, expiredDisposalRecords: ExpiredDisposal[]}> {
     try {
-      console.log(expiredItemBatches);
       const transaction = true;
       const uniqueItemsToBeDisposed: UniqueItemsToBeDisposed = await this.sortExpiredItemBatches(expiredItemBatches);
       const totalQuantityOfAllExpiredDisposalItems = [...uniqueItemsToBeDisposed].reduce((total, [item, itemBatchesBreakdown]) => {
