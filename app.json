@@ -38,10 +38,6 @@
       "description": "",
       "value": "perishable_ecommerce_db"
     },
-    "PORT": {
-      "description": "",
-      "value": 4900
-    },
     "EXPIRED_ITEMS_LOG_DIR": {
       "description": "",
       "value": "expired_items_archival_log"
