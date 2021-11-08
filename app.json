@@ -14,29 +14,8 @@
       "description": "Environment [PROD/DEV/TEST]",
       "value": "PROD"
     },
-    "POSTGRES_HOST": {
-      "description": "",
-      "value": "127.0.0.1"
-    },
-    "POSTGRES_PORT": {
-      "description": "",
-      "value": "5432"
-    },
-    "POSTGRES_USER": {
-      "description": "",
-      "value": "postgres"
-    },
-    "POSTGRES_PASSWORD": {
-      "description": "",
-      "value": "mysecretpassword"
-    },
-    "POSTGRES_DATABASE_SERVER": {
-      "description": "",
-      "value": "perishable_ecommerce_db_server"
-    },
-    "POSTGRES_DATABASE": {
-      "description": "",
-      "value": "perishable_ecommerce_db"
+    "NODE_ENV": {
+      "value": "production"
     },
     "EXPIRED_ITEMS_LOG_DIR": {
       "description": "",

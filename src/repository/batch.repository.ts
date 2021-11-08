@@ -9,7 +9,6 @@ export class BatchRepository extends Repository<Batch> {
     return this.findOne(batchID, {transaction})
   }
 
-
   async findByBatchExpiryTime(expiryTime: string): Promise<Batch> {
     return this.findOne({
       where: {

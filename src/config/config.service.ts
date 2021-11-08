@@ -32,7 +32,7 @@ class ConfigService {
   private getValue(key: string, throwOnMissing = true): string {
     const value = this.env[key];
     if (!value && throwOnMissing) {
-      throw new Error(`config error - missing env.${key}`);
+      // throw new Error(`config error - missing env.${key}`);
     }
 
     return value;
@@ -79,13 +79,13 @@ class ConfigService {
 }
 
 const configService = new ConfigService(process.env)
-  .ensureValues([
-    'POSTGRES_HOST',
-    'POSTGRES_PORT',
-    'POSTGRES_USER',
-    'POSTGRES_PASSWORD',
-    'POSTGRES_DATABASE',
-    'EXPIRED_ITEMS_LOG_DIR'
-  ]);
+  // .ensureValues([
+  //   'POSTGRES_HOST',
+  //   'POSTGRES_PORT',
+  //   'POSTGRES_USER',
+  //   'POSTGRES_PASSWORD',
+  //   'POSTGRES_DATABASE',
+  //   'EXPIRED_ITEMS_LOG_DIR'
+  // ]);
 
 export { configService };
