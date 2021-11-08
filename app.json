@@ -1,12 +1,12 @@
 {
   "name": "perishable-inventory-ecommerce",
   "description": "Persisted API Service to manage perishable items storage and sales",
-  "website": "",
+  "website": "https://github.com/snoseeds/perishable-inventory-ecommerce",
   "repository": "https://github.com/snoseeds/perishable-inventory-ecommerce",
   "logo": "",
   "success_url": "/",
   "scripts":{
-    "predeploy": "./src/scripts/start.sh"
+    "postdeploy": "./src/scripts/start.sh"
   },
   "env": {
     "MODE": {
@@ -14,14 +14,15 @@
       "value": "PROD"
     },
     "NODE_ENV": {
+      "description": "Environment",
       "value": "production"
     },
     "EXPIRED_ITEMS_LOG_DIR": {
-      "description": "",
+      "description": "logging disposal of expired items",
       "value": "expired_items_archival_log"
     },
     "RUN_MIGRATIONS": {
-      "description": "",
+      "description": "should be true for production",
       "value": true
     }
   },
