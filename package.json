@@ -40,6 +40,7 @@
     "class-validator": "^0.13.1",
     "coveralls": "^3.1.1",
     "dotenv": "^10.0.0",
+    "ts-node": "^10.4.0",
     "find-config": "^1.0.0",
     "nest-transact": "^1.1.5",
     "nyc": "^15.1.0",

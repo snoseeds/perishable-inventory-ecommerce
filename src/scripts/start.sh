@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 set -x
+npm run build
 if [ "$RUN_MIGRATIONS" ]; then
   echo "RUNNING MIGRATIONS";
   npm run typeorm:migration:run
