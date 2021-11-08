@@ -37,12 +37,8 @@ export class AddItemSellItemController {
                     201,
                     `Batch quantity has been successfully added to the item, see details in data`,
                     { itemName, itemStatus, totalItemQuantity: totalUnexpiredItemQuantities, batchStatus, itemBatchStatus, itemBatch: {
-                        ...itemBatch,
-                        batch: {
-                            ...itemBatch.batch,
-                            expiryTime: Number(itemBatch.batch.expiryTime)
-                        }
-                    } }
+                        ...itemBatch, batch: {  ...itemBatch.batch, expiryTime: Number(itemBatch.batch.expiryTime) } } 
+                    }
                 )
             )
         } else {
@@ -62,18 +58,10 @@ export class AddItemSellItemController {
                         const { item, itemBatchesForThisSale, sumOfItemBatches} = resultObj;
                         const salesBatches: SalesBatch[] = await transactionAppService.sellItems(item, quantity, itemBatchesForThisSale, sumOfItemBatches);
                         if (useConsistentJsendResp) {
-                            return res.status(201)
-                                .send(new JSendResponseDto("success", 201, "Sales is successful for the item's quantities specified, see details in data",
+                            return res.status(201).send(new JSendResponseDto("success", 201, "Sales is successful for the item's quantities specified, see details in data",
                                  { sales: salesBatches[0].sales, salesBatches: salesBatches.map(salesBatch => {
                                      delete salesBatch.sales;
-                                     return {
-                                         ...salesBatch,
-                                         batch: {
-                                             ...salesBatch.batch,
-                                             expiryTime: Number(salesBatch.batch.expiryTime)
-                                         }
-                                     }
-                                    })}));
+                                     return { ...salesBatch, batch: { ...salesBatch.batch, expiryTime: Number(salesBatch.batch.expiryTime) } } })}));
                         }
                         return res.status(201).send({});
                     }
@@ -81,10 +69,7 @@ export class AddItemSellItemController {
                         { itemName, maxQuantityInInventory: resultObj.sumOfItemBatches, time: new Date().toISOString() }));
                 } catch (err) { throw err; }
             })
-        } catch(err) {
-            console.log(err);
-            // return res.status(500).send(new JSendResponseDto("failed", 500, "Internal Error", "Contact Deep Consulting Solution"));
-        }
+        } catch(err) { console.log(err); /* return res.status(500).send(new JSendResponseDto("failed", 500, "Internal Error", "Contact Deep Consulting Solution")); */ }
     }
 
     @Get(':item/quantity')
@@ -123,10 +108,7 @@ export class AddItemSellItemController {
                     if (expiredItemBatches.length > 0) {
                         const { disposalRecord, expiredDisposalRecords }= await transactionAppService.archiveExpiredBatchItemsToDisposal(expiredItemBatches);
                         message = `Successfully archived removed expired item batches that are less than or equal to '${time}'`;
-                        disposalArchiveDetails = {
-                            disposalRecord,
-                            expiredDisposalRecords
-                        };
+                        disposalArchiveDetails = { disposalRecord, expiredDisposalRecords };
                     } else {
                         message = `There are no expired item batches to remove that are less than or equal to '${time}'`;
                     }
@@ -141,7 +123,6 @@ export class AddItemSellItemController {
         const data = { date, message, disposalArchiveDetails };
         fs.writeFileSync(join(__dirname, process.env['EXPIRED_ITEMS_LOG_DIR'], `${date}-${logTime}.json`),
             JSON.stringify(data, null, 2));
-
         return res.status(200).send(new JSendResponseDto('success', 200, "See data for details", data))
     }
 }

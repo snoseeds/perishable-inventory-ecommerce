@@ -1,0 +1,66 @@
+{
+  "name": "perishable-inventory-ecommerce",
+  "description": "Persisted API Service to manage perishable items storage and sales",
+  "website": "",
+  "repository": "https://github.com/snoseeds/perishable-inventory-ecommerce",
+  "logo": "",
+  "success_url": "/",
+  "scripts":{
+    "predeploy": "npm install && npm run build",
+    "postdeploy": "./src/scripts/start.sh"
+  },
+  "env": {
+    "MODE": {
+      "description": "Environment [PROD/DEV/TEST]",
+      "value": "PROD"
+    },
+    "POSTGRES_HOST": {
+      "description": "",
+      "value": "127.0.0.1"
+    },
+    "POSTGRES_PORT": {
+      "description": "",
+      "value": "5432"
+    },
+    "POSTGRES_USER": {
+      "description": "",
+      "value": "postgres"
+    },
+    "POSTGRES_PASSWORD": {
+      "description": "",
+      "value": "mysecretpassword"
+    },
+    "POSTGRES_DATABASE_SERVER": {
+      "description": "",
+      "value": "perishable_ecommerce_db_server"
+    },
+    "POSTGRES_DATABASE": {
+      "description": "",
+      "value": "perishable_ecommerce_db"
+    },
+    "PORT": {
+      "description": "",
+      "value": 4900
+    },
+    "EXPIRED_ITEMS_LOG_DIR": {
+      "description": "",
+      "value": "expired_items_archival_log"
+    },
+    "RUN_MIGRATIONS": {
+      "description": "",
+      "value": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "image": "heroku/nodejs",
+  "addons": ["heroku-postgresql"],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
