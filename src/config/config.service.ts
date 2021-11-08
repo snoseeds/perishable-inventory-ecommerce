@@ -3,8 +3,8 @@ import { join } from 'path';
 import path from "path"
 
 // const MODE = 'DEV'; // DEV, PROD
-const MODE = 'TEST';
-// const MODE = 'PROD';
+// const MODE = 'TEST';
+const MODE = 'PROD';
 
 const envResolver = {
   prod(): void {
