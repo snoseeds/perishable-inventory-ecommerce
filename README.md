@@ -34,6 +34,7 @@ Built with Postman [link](https://documenter.getpostman.com/view/6777319/UVC3knt
 run: 
 ```Bash
     $ git clone https://github.com/snoseeds/perishable-inventory-ecommerce
+    $ git checkout develop
     $ cd perishable-inventory-ecommerce
     $ npm install
     $ npm run start:dev:clean / first run, subsequent runs can use `npm run start:dev` if the db is to be preserved
