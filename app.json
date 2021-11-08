@@ -7,7 +7,7 @@
   "success_url": "/",
   "scripts":{
     "predeploy": "npm install && npm run build",
-    "postdeploy": "./src/scripts/start.sh"
+    "postdeploy": "npm run pretypeorm && ./src/scripts/start.sh"
   },
   "env": {
     "MODE": {

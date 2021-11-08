@@ -1,10 +1,6 @@
 {
   "type": "postgres",
-  "host": "127.0.0.1",
-  "port": 5432,
-  "username": "postgres",
-  "password": "mysecretpassword",
-  "database": "perishable_ecommerce_db_test",
+  "port": null,
   "entities": [
     "/home/snoseeds/repos/perishable-inventory-ecommerce/src/domain/model/*.entity.{ts,js}"
   ],
