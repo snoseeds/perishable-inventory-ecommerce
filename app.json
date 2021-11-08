@@ -6,8 +6,7 @@
   "logo": "",
   "success_url": "/",
   "scripts":{
-    "predeploy": "npm install && npm run build",
-    "postdeploy": "npm run pretypeorm && ./src/scripts/start.sh"
+    "predeploy": "./src/scripts/start.sh"
   },
   "env": {
     "MODE": {
