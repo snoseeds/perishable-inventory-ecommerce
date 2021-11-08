@@ -43,9 +43,9 @@ class ConfigService {
     return this;
   }
 
-  public getPort() {
-    return this.getValue('PORT', true);
-  }
+  // public getPort() {
+  //   return this.getValue('PORT', true);
+  // }
 
   public isProduction() {
     const mode = this.getValue('MODE', false);
